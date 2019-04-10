@@ -12,9 +12,12 @@ app.controller('personsListController', function ($scope, $rootScope, personServ
         sortInfo: $scope.sortInfo,
 
         columnDefs: [
-            { field: 'id', displayName: 'Id' },
-            { field: 'name', displayName: 'Name' },
-            { field: 'description', displayName: 'Description' },
+      //  id":1,"firstName":"Foo1","lastName
+          { field: 'id', displayName: 'Id' },
+          { field: 'firstName', displayName: 'Name' },
+         //   { field: 'name', displayName: 'Name' },
+         { field: 'lastName', displayName: 'Description' },
+         //{ field: 'description', displayName: 'Description' },
             { field: '', width: 30, cellTemplate: '<span class="glyphicon glyphicon-remove remove" ng-click="deleteRow(row)"></span>' }
         ],
 
