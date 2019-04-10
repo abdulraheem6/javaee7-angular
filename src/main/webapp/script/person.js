@@ -156,5 +156,6 @@ app.controller('alertMessagesController', function ($scope) {
 
 // Service that provides persons operations
 app.factory('personService', function ($resource) {
-    return $resource('resources/persons/:id');
+  //  return $resource('resources/persons/:id');
+    return $resource('http://18.218.61.179:8091/ngdemo/web/users/:id');
 });
