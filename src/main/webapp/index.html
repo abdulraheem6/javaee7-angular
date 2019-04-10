@@ -108,7 +108,7 @@
 
             <!-- Display an error if the input is invalid and is dirty (only when someone changes the value) -->
             <div class="form-group" ng-class="{'has-error' : personForm.imageUrl.$invalid && personForm.imageUrl.$dirty}">
-                //<label for="imageUrl">Image URL:</label>
+                <!--//<label for="imageUrl">Image URL:</label>-->
                 <label for="imageUrl">LastName:</label>
                 <!-- Display a check when the field is valid and was modified -->
                 <span ng-class="{'glyphicon glyphicon-ok' : personForm.imageUrl.$valid && personForm.imageUrl.$dirty}"></span>
@@ -131,6 +131,13 @@
                 <button type="button" class="btn btn-primary" ng-click="clearForm()">Clear</button>
                 <button type="submit" class="btn btn-primary" ng-disabled="personForm.$invalid">Save</button>
             </div>
+            <table>
+         <tr ng-repeat="x in person">
+          <td>{{ x.id }}</td>
+          <td>{{ x.fistName }}</td>
+          <td>{{ x.lastName }}</td>
+         </tr>
+</table>
         </form>
     </div>
 </div>
